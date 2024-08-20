@@ -19,6 +19,10 @@ publishing {
         maven {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/kubixapp/common-config")
+            credentials {
+                username = "kubixapp" // Your GitHub username
+                password = System.getenv("PKG_TOKEN") // Your GitHub Personal Access Token (PAT)
+            }
         }
     }
 }
